@@ -35,7 +35,7 @@ setopt CORRECT_ALL
 setopt AUTO_CD
 
 # Change default prompt
-export PROMPT='%F{139}%2~%f %F{178}%#%f '
+export PROMPT='%F{139}%2~%f %F{178}$(git_super_status) %#%f '
 setopt PROMPT_SUBST
 
 # Change default tethering
