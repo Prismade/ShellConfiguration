@@ -32,6 +32,8 @@ You're awesome!
 touch $HOME/.hushlogin
 ```
 
+### Additions
+
 I use these additions to zsh:
 * zsh-autosuggestions
 * zsh-completions
