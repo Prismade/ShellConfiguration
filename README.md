@@ -31,3 +31,20 @@ You're awesome!
 ``` zsh
 touch $HOME/.hushlogin
 ```
+
+I use these additions to zsh:
+* zsh-autosuggestions
+* zsh-completions
+* zsh-git-prompt
+* zsh-history-substring-search
+* zsh-syntax-highlighting
+
+You can install it with HomeBrew using this command:
+
+``` zsh
+brew install zsh-autosuggestions\
+    zsh-completions\
+    zsh-git-prompt\
+    zsh-history-substring-search\
+    zsh-syntax-highlighting
+```
