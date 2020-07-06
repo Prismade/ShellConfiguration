@@ -41,7 +41,7 @@ I use these additions to zsh:
 * zsh-history-substring-search
 * zsh-syntax-highlighting
 
-You can install it with HomeBrew using this command:
+You can install them with HomeBrew using this command:
 
 ``` zsh
 brew install zsh-autosuggestions\
