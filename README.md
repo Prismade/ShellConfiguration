@@ -14,6 +14,7 @@ echo ZDOTDIR="$HOME/.zsh" >> $HOME/zshenv
 
 # copy config file to the rigth location
 sudo cp $HOME/zshenv /etc/zshenv
+rm -f $HOME/zshenv
 ```
 
 Then clone this repo:
@@ -21,6 +22,16 @@ Then clone this repo:
 ``` zsh
 git clone https://github.com/Prismade/zsh-config.git $HOME/.zsh
 ```
+
+If getting error:
+> zsh compinit: insecure directories, run compaudit for list.
+
+run
+``` zsh
+chmod -R go-w '/opt/homebrew/share'
+```
+
+If you have .zcompdump somewhere (at ~./zsh or at $HOME) you'd better delete it after installing all this.
 
 Restart your zsh session.
 
@@ -37,7 +48,6 @@ touch $HOME/.hushlogin
 I use these additions to zsh:
 * zsh-autosuggestions
 * zsh-completions
-* zsh-git-prompt
 * zsh-history-substring-search
 * zsh-syntax-highlighting
 
@@ -46,7 +56,6 @@ You can install them with HomeBrew using this command:
 ``` zsh
 brew install zsh-autosuggestions\
     zsh-completions\
-    zsh-git-prompt\
     zsh-history-substring-search\
     zsh-syntax-highlighting
 ```

@@ -35,7 +35,7 @@ setopt CORRECT_ALL
 setopt AUTO_CD
 
 # Change default prompt
-export PROMPT='%F{139}%2~%f %F{178}$(git_super_status) %#%f '
+export PROMPT='%F{139}%2~%f %F{178}%#%f '
 setopt PROMPT_SUBST
 
 # Change default tethering
@@ -45,10 +45,13 @@ alias ttl='sudo sysctl -w net.inet.ip.ttl=65'
 ## ===== PLUGINS SETTINGS ===== ##
 
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/opt/zsh-git-prompt/zshrc.sh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/opt/zsh-git-prompt/zshrc.sh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
