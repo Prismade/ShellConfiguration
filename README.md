@@ -28,7 +28,7 @@ If getting error:
 
 run
 ``` zsh
-chmod -R go-w '/opt/homebrew/share'
+chmod -R go-w '$(brew --prefix)/share'
 ```
 
 If you have .zcompdump somewhere (at ~./zsh or at $HOME) you'd better delete it after installing all this.
