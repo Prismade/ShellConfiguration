@@ -58,3 +58,10 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
+
+
+## ===== rbenv ===== ##
+
+
+eval "$(rbenv init - zsh)"
+
