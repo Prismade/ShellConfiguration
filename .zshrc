@@ -41,6 +41,9 @@ setopt PROMPT_SUBST
 # Change default tethering
 alias ttl='sudo sysctl -w net.inet.ip.ttl=65'
 
+# Delete Xcode drived data
+alias xdd='/bin/rm -rf /Users/prismade/Library/Developer/Xcode/DerivedData/*'
+
 
 ## ===== PLUGINS SETTINGS ===== ##
 
